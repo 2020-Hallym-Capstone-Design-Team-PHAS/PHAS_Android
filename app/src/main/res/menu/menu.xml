@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group>
+        <item
+            android:id="@+id/nav_first"
+            android:checkable="false"
+            android:title="첫번째" />
+        <item
+            android:id="@+id/nav_second"
+            android:checkable="false"
+            android:title="두번째" />
+        <item
+            android:id="@+id/nav_third"
+            android:checkable="false"
+            android:title="세번째" />
+        <item
+            android:id="@+id/nav_fourth"
+            android:checkable="false"
+            android:title="네번째" />
+    </group>
+</menu>
