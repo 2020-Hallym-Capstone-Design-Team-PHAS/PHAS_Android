@@ -33,6 +33,82 @@
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title"/>
         </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_left0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_right0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.48"/>
+
+        <com.visualizer.amplitude.AudioRecordView
+            android:id="@+id/audioRecordView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:chunkAlignTo="center"
+            app:chunkColor="#15C9E1"
+            app:chunkMaxHeight="80dp"
+            app:chunkMinHeight="1dp"
+            app:chunkRoundedCorners="true"
+            app:chunkSoftTransition="true"
+            app:chunkSpace="2dp"
+            app:chunkWidth="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/gl_top"
+            app:layout_constraintEnd_toStartOf="@+id/gl_right0"
+            app:layout_constraintStart_toStartOf="@+id/gl_left0"
+            app:layout_constraintTop_toTopOf="@+id/gl_top0"/>
+
+        <Button
+            android:id="@+id/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="71dp"
+            android:text="RECORD"
+            app:layout_constraintEnd_toEndOf="@+id/history"
+            app:layout_constraintStart_toStartOf="@+id/audioRecordView"
+            app:layout_constraintTop_toBottomOf="@+id/audioRecordView" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="55dp"
+            android:text="PLAY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/audioRecordView" />
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="133dp"
+            android:text="HISTORY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
