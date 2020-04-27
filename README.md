@@ -1,4 +1,5 @@
-# 한림대학교 Capstone Design [PHAS] 팀 Android Part
+# 한림대학교 Capstone Design [PHAS] 팀 
+## Android Part
 
 개발자
 * 20155149 이용하
