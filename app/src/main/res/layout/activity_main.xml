@@ -1,0 +1,246 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#89B2E9"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHAS"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_left0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.075"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_right0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.925"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_middle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.495"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.59"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.72"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_top6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.875"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="강아지 정보가 표시될 부분"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/gl_top7"
+            app:layout_constraintStart_toStartOf="@id/gl_left0"
+            app:layout_constraintEnd_toEndOf="@id/gl_right0"
+            app:layout_constraintBottom_toTopOf="@id/gl_top4"/>
+
+        <TextView
+            android:id="@+id/wraning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* 측정이 시작되면 아래에 파형이 나타납니다."
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="@id/gl_left0"
+            app:layout_constraintEnd_toEndOf="@id/gl_right0"
+            app:layout_constraintBottom_toTopOf="@id/gl_top0"/>
+
+        <com.visualizer.amplitude.AudioRecordView
+            android:id="@+id/audioRecordView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_round_shape_gray"
+            android:layout_marginTop="10dp"
+            app:chunkAlignTo="center"
+            app:chunkColor="#89B2E9"
+            app:chunkMaxHeight="160dp"
+            app:chunkMinHeight="3dp"
+            app:chunkRoundedCorners="true"
+            app:chunkSoftTransition="true"
+            app:chunkSpace="1dp"
+            app:chunkWidth="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/gl_top"
+            app:layout_constraintEnd_toStartOf="@+id/gl_right0"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/gl_left0"
+            app:layout_constraintTop_toTopOf="@+id/gl_top0"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* 녹음 버튼을 누른 뒤, \n   녹음을 중지하려면 녹음버튼을 한번 더 눌러주세요."
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="@id/gl_left0"
+            app:layout_constraintTop_toBottomOf="@id/record"/>
+
+        <Button
+            android:id="@+id/record"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="녹음"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_round_shape"
+            app:layout_constraintStart_toStartOf="@id/gl_left0"
+            app:layout_constraintTop_toTopOf="@id/gl_top1"
+            app:layout_constraintEnd_toEndOf="@id/gl_middle"
+            app:layout_constraintBottom_toBottomOf="@id/gl_top2"/>
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="재생"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_round_shape"
+            app:layout_constraintStart_toStartOf="@id/gl_middle"
+            app:layout_constraintEnd_toEndOf="@id/gl_right0"
+            app:layout_constraintTop_toTopOf="@id/gl_top1"
+            app:layout_constraintBottom_toBottomOf="@id/gl_top2"/>
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="녹음 파일 보기"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_shape"
+            app:layout_constraintTop_toTopOf="@id/gl_top5"
+            app:layout_constraintStart_toStartOf="@id/gl_left0"
+            app:layout_constraintEnd_toEndOf="@id/gl_right0"
+            app:layout_constraintBottom_toBottomOf="@id/gl_top3"/>
+
+        <Button
+            android:id="@+id/result"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="검진 결과 목록"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_shape"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/history"
+            app:layout_constraintStart_toStartOf="@id/gl_left0"
+            app:layout_constraintEnd_toEndOf="@id/gl_right0"
+            app:layout_constraintBottom_toBottomOf="@id/gl_top6"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

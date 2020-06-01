@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradation"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.585"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.37"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_right0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_right1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/hotdog"
+        app:layout_constraintTop_toTopOf="@id/gl_top2"
+        app:layout_constraintStart_toStartOf="@id/gl_left1"
+        app:layout_constraintEnd_toEndOf="@id/gl_right1"
+        app:layout_constraintBottom_toTopOf="@id/gl_top3" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="PHAS"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintBottom_toTopOf="@id/gl_top0"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:hint="EMAIL"
+        android:textColorHint="#FFFFFF"
+        android:maxLines="1"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textCursorDrawable="@null"
+        app:layout_constraintTop_toTopOf="@id/gl_top0"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintBottom_toTopOf="@id/password"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box"
+        android:hint="PASSWORD"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/password_icon"
+        android:drawablePadding="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColorHint="#FFFFFF"
+        android:password="true"
+        android:maxLines="1"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textCursorDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"/>
+
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LOG  IN"
+        android:textColor="#89B2E9"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:background="@drawable/btn_round_shape_white"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintTop_toTopOf="@id/gl_top1"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintBottom_toTopOf="@id/register"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:background="#00ff0000"
+        app:layout_constraintTop_toBottomOf="@id/log_in"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.phas"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MICROPHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.phas.DogListItem" />
+        <activity android:name="com.example.phas.DogListActivity" />
+        <activity android:name="com.example.phas.DogRegisterActivity" />
+        <activity android:name="com.example.phas.AppInfoActivity" />
+        <activity android:name="com.example.phas.CautionActivity" />
+        <activity android:name="com.example.phas.CausionActivity" />
+        <activity android:name="com.example.phas.HistoryActivity" />
+        <activity android:name="com.example.phas.MainActivity" />
+        <activity android:name="com.example.phas.IntroActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.phas.LoginActivity" />
+        <activity android:name="com.example.phas.RegisterActivity" />
+    </application>
+
+</manifest>
