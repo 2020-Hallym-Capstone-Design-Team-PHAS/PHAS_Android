@@ -161,7 +161,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "이미 존재하는 이메일 입니다.", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(RegisterActivity.this, "입력한 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "회원가입에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show();
                         Log.d("error", getPassword() + " " + getCheckPassword());
                     }
                 }

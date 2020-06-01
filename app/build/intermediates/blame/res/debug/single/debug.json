@@ -8,6 +8,10 @@
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dog_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\dog_icon.png"
+    },
+    {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },

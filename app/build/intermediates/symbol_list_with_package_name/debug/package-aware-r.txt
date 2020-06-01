@@ -1055,6 +1055,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dog_icon
 drawable email
 drawable gradation
 drawable hotdog
@@ -1164,6 +1165,7 @@ id center_vertical
 id chains
 id checkbox
 id checked
+id choice
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1210,6 +1212,7 @@ id filled
 id fixed
 id forever
 id ghost_view
+id gl_icon_guide
 id gl_left
 id gl_left0
 id gl_left1
@@ -1226,6 +1229,7 @@ id gl_top4
 id gl_top5
 id gl_top6
 id gl_top7
+id gl_top8
 id gone
 id group_divider
 id groups
@@ -1312,6 +1316,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id send
 id shortcut
 id showCustom
 id showHome

@@ -20,9 +20,7 @@
         <activity android:name=".DogListItem"></activity>
         <activity android:name=".DogListActivity" />
         <activity android:name=".DogRegisterActivity" />
-        <activity android:name=".AppInfoActivity" />
         <activity android:name=".CautionActivity" />
-        <activity android:name=".CausionActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".IntroActivity">

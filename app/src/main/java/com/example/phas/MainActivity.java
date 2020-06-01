@@ -1,6 +1,7 @@
 package com.example.phas;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
@@ -8,6 +9,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
@@ -18,36 +20,46 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.visualizer.amplitude.AudioRecordView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    //--------------------------- 레이아웃 관련 --------------------------- //
+    //--------------------------- 레이아웃 관련 ---------------------------//
     Toolbar toolBar;
     ActionBar actionBar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    //--------------------------------------------------------------------- //
+    TextView choice;
+    //---------------------------------------------------------------------//
 
     private final static String TAG = "MainActivity";
 
-    //--------------------------- 소리 파형 변수 --------------------------- //
+    //--------------------------- 소리 파형 변수 ---------------------------//
     private Timer timer = null;
     private TimerTask timerTask = null;
     private AudioRecordView audioRecordView;
-    //--------------------------------------------------------------------- //
+    //---------------------------------------------------------------------//
 
+    PostJSONResult JSONResult;
+    String result = "";
+    String sName;
+    int count = 1;
 
-    //-------------------------- 소리녹음 및 재생 -------------------------- //
+    //-------------------------- 소리녹음 및 재생 --------------------------//
     MediaRecorder mRecorder = null;
     MediaPlayer mPlayer = null;
 
@@ -55,11 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isRecording = false;
     boolean isPlaying = false;
-    //--------------------------------------------------------------------- //
+    //---------------------------------------------------------------------//
 
     Button mBtRecord = null;
     Button mBtPlay = null;
     Button mBtHistory = null;
+    Button mSend = null;
 
     Boolean flag = false;
 
@@ -71,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         toolBar = findViewById(R.id.toolbar);
         setSupportActionBar(toolBar);
 
-        //-------------------------- drawer 메뉴 -------------------------- //
+        //-------------------------- drawer 메뉴 --------------------------//
         actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼 만들기
@@ -112,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
         audioRecordView = findViewById(R.id.audioRecordView);
 
-        //-------------------------- 어플리케이션 권한 여부 -------------------------- //
+        //-------------------------- 어플리케이션 권한 여부 --------------------------//
         int permissionStorage = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         int permissionMIC = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO);
         if (permissionStorage != PackageManager.PERMISSION_GRANTED &&
@@ -132,24 +145,28 @@ public class MainActivity extends AppCompatActivity {
                 Button btn1 = findViewById(R.id.play);
                 Button btn2 = findViewById(R.id.history);
 
-                if (!isRecording) {
-                    initAudioRecorder();
-                    mRecorder.start();
-                    startDrawing();
-                    isRecording = true;
-                    mBtRecord.setText("녹음 멈추기");
-                } else {
-                    mRecorder.stop();
-                    mRecorder.reset();
-                    stopDrawing();
-                    isRecording = false;
-                    mBtRecord.setText("다시 녹음하기");
-                    Toast.makeText(MainActivity.this, "결과가 저장되었습니다!", Toast.LENGTH_SHORT).show();
-                }
+                if(Values.dName != null) {
+                    if (!isRecording) {
+                        initAudioRecorder();
+                        mRecorder.start();
+                        startDrawing();
+                        isRecording = true;
+                        mBtRecord.setText("녹음 멈추기");
+                    } else {
+                        mRecorder.stop();
+                        mRecorder.reset();
+                        stopDrawing();
+                        isRecording = false;
+                        mBtRecord.setText("다시 녹음하기");
+                        Toast.makeText(MainActivity.this, "결과가 저장되었습니다!", Toast.LENGTH_SHORT).show();
+                    }
 
-                btn1.setEnabled(flag);
-                btn2.setEnabled(flag);
-                flag = !flag;
+                    btn1.setEnabled(flag);
+                    btn2.setEnabled(flag);
+                    flag = !flag;
+                } else {
+                    Toast.makeText(MainActivity.this, "강아지를 먼저 선택해주세요.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -196,9 +213,71 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    //-------------------------- 메인화면에서 강아지 선택 -------------------------//
+        choice = findViewById(R.id.choice);
+        choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("user_id", Values.email);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    JSONResult = new PostJSON().execute("http://210.115.230.131:10480/dogs/doginfo_user", jsonObject.toString()).get();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                try {
+                    ArrayList<DogItemData> data = new ArrayList<DogItemData>();
+                    result = JSONResult.getResultStr();
+
+                    JSONObject json = null;
+                    json = new JSONObject(result);
+
+                    sName = json.getString("dog_name");
+                    String match1 = "[\\[\\]]";
+                    sName = sName.replaceAll(match1, "");
+                    String match2 = "\"";
+                    sName = sName.replaceAll(match2, "");
+
+                    final String[] aName = sName.split(",");
+
+                    if (aName == null || aName.length == 0) {
+                        Toast.makeText(MainActivity.this, "강아지를 먼저 등록해주세요.", Toast.LENGTH_LONG).show();
+                    } else {
+                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+                             .setTitle("강아지 선택")
+                             .setItems(aName, new DialogInterface.OnClickListener() {
+                                 @Override
+                                 public void onClick(DialogInterface dialog, int item) {
+                                     Values.dName = aName[item];
+                                     choice.setText(aName[item]);
+                                     Log.d("dog name test", Values.dName);
+                                 }
+                             });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        //-------------------------- 파일 서버로 전송 -------------------------//
+        mSend = findViewById(R.id.send);
+        mSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
-    //-------------------------- 소리 녹음 및 재생 -------------------------- //
+    //-------------------------- 소리 녹음 및 재생 --------------------------//
     MediaPlayer.OnCompletionListener mListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mp) {
@@ -224,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
             dir.mkdirs();
         }
         mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Phas/" + getTime + ".acc"; // 현재 시간을 이름으로 파일 생성
+        Values.path = mPath;
 
         mRecorder.setOutputFile(mPath);
 

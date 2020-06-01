@@ -30,9 +30,7 @@
         <activity android:name="com.example.phas.DogListItem" />
         <activity android:name="com.example.phas.DogListActivity" />
         <activity android:name="com.example.phas.DogRegisterActivity" />
-        <activity android:name="com.example.phas.AppInfoActivity" />
         <activity android:name="com.example.phas.CautionActivity" />
-        <activity android:name="com.example.phas.CausionActivity" />
         <activity android:name="com.example.phas.HistoryActivity" />
         <activity android:name="com.example.phas.MainActivity" />
         <activity android:name="com.example.phas.IntroActivity" >
