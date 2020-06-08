@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS_STORAGE, 3);
         }
 
-        mBtRecord = (Button) findViewById(R.id.record);
+        mBtRecord = findViewById(R.id.record);
         mBtRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mBtPlay = (Button) findViewById(R.id.play);
+        mBtPlay = findViewById(R.id.play);
         mBtPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mBtHistory = (Button) findViewById(R.id.history);
+        mBtHistory = findViewById(R.id.history);
         mBtHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -272,7 +272,9 @@ public class MainActivity extends AppCompatActivity {
         mSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                File f = new File(Values.path);
+                Log.d("path test", Values.path);
+                new HttpMultiPart(f);
             }
         });
     }
@@ -286,13 +288,6 @@ public class MainActivity extends AppCompatActivity {
     };
 
     void initAudioRecorder() {
-        mRecorder.reset();
-        mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        mRecorder.setAudioSamplingRate(44100);
-        mRecorder.setAudioEncodingBitRate(96000);
-
         long now = System.currentTimeMillis();
         Date mDate = new Date(now);
         SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd HH시 mm분 ss초"); // 날짜, 시간으로 파일명 저장
@@ -302,8 +297,19 @@ public class MainActivity extends AppCompatActivity {
         if (!dir.exists()) {
             dir.mkdirs();
         }
-        mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Phas/" + getTime + ".acc"; // 현재 시간을 이름으로 파일 생성
+        mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Phas/" + getTime + ".aac"; // 현재 시간을 이름으로 파일 생성
         Values.path = mPath;
+        Values.file = getTime + ".aac";
+
+        Log.d("path test", mPath);
+
+        mRecorder.reset();
+
+        mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        mRecorder.setAudioEncodingBitRate(16);
+        mRecorder.setAudioSamplingRate(44100);
 
         mRecorder.setOutputFile(mPath);
 
