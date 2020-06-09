@@ -15,6 +15,7 @@ public class ListAdapter extends ArrayAdapter {
     private int resourceId;                 // 생성자로부터 전달된 resource id 값을 저장.
     private ArrayList<ListViewItem> data = null;
     Button list_play;
+    Button list_delete;
 
     public ListAdapter(Context context, int resource, ArrayList<ListViewItem> list) {
         super(context, resource, list);
@@ -46,6 +47,9 @@ public class ListAdapter extends ArrayAdapter {
 
         list_play = (Button) convertView.findViewById(R.id.list_play);
         list_play.setOnClickListener(data.get(position).onClickListener);
+
+        list_delete = (Button) convertView.findViewById(R.id.list_delete);
+        list_delete.setOnClickListener(data.get(position).onClickListener);
 
         convertView.setTag("" + position);
         return convertView;

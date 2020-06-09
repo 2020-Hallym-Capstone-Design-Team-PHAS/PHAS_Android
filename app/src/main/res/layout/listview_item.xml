@@ -20,8 +20,22 @@
         android:layout_weight="0.4"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/btn_round_shape"
         android:text="재생"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/list_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_round_shape"
+        android:text="삭제"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
+
 </LinearLayout>

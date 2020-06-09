@@ -272,9 +272,7 @@ public class MainActivity extends AppCompatActivity {
         mSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                File f = new File(Values.path);
-                Log.d("path test", Values.path);
-                new HttpMultiPart(f);
+                new HttpMultiPart();
             }
         });
     }
