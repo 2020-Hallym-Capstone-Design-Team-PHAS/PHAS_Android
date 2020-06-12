@@ -145,7 +145,7 @@
         android:paddingLeft="10dp"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:hint="생일                     (형식:20200601) "
+        android:hint="생일                     (예:20200601) "
         android:textColorHint="#FFFFFF"
         android:maxLines="1"
         android:inputType="phone"

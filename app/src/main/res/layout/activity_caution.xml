@@ -52,15 +52,51 @@
         app:layout_constraintGuide_percent="0.2"/>
 
     <TextView
+        android:id="@+id/info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="사용방법에 대한 안내"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
         app:layout_constraintTop_toTopOf="@id/gl_top0"/>
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="\n본 어플리케이션은 실제 진단이 아닌, \n단순 참고용으로만 사용해주세요."
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:textColor="@color/colorRed"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintTop_toBottomOf="@id/info"/>
+
+    <TextView
+        android:id="@+id/step"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="\n\n사용 순서"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintTop_toBottomOf="@id/warning"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="\n\n1. 어플리케이션을 실행해주세요. \n\n2. 강아지를 선택하세요. \n\n3. 강아지에게 측정기를 대고 \n녹음 버튼을 누르세요. \n\n4. 검진 버튼을 누르면 \n진단결과를 확인할 수 있습니다."
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintTop_toBottomOf="@id/step"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

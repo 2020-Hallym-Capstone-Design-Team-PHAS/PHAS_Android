@@ -8,10 +8,6 @@
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dog_icon.png.flat",
-        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\dog_icon.png"
-    },
-    {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
@@ -52,6 +48,10 @@
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\hotdog.png"
     },
     {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_dog_list_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\dog_list_icon.png"
+    },
+    {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_round_shape_gray.xml.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\btn_round_shape_gray.xml"
     },
@@ -76,6 +76,14 @@
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\activity_intro.xml"
     },
     {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_info_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\info_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_drawer_dog_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\drawer_dog_icon.png"
+    },
+    {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\layout_listview_item.xml.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\listview_item.xml"
     },
@@ -92,16 +100,20 @@
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\email.png"
     },
     {
-        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_history.xml.flat",
-        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\activity_history.xml"
-    },
-    {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_history.xml.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\activity_history.xml"
+    },
+    {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logout_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\logout_icon.png"
     },
     {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_app_info.xml.flat",
@@ -114,6 +126,10 @@
     {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_dog_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\dog_icon.png"
     },
     {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
@@ -130,6 +146,10 @@
     {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_round_shape_deep_blue.xml.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable\\btn_round_shape_deep_blue.xml"
     },
     {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -150,5 +170,9 @@
     {
         "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_main.xml.flat",
         "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_using_icon.png.flat",
+        "source": "C:\\Users\\YONG\\Desktop\\PHAS\\app\\src\\main\\res\\drawable-v24\\using_icon.png"
     }
 ]

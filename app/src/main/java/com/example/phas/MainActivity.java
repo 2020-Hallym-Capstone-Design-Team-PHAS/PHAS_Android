@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
 
                 int id = menuItem.getItemId();
-                String title = menuItem.getTitle().toString();
+                //String title = menuItem.getTitle().toString();
 
                 if (id == R.id.caution) {
                     Intent intent1 = new Intent(MainActivity.this, CautionActivity.class);
@@ -111,10 +112,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.dogList) {
                     Intent intent1 = new Intent(MainActivity.this, DogListActivity.class);
                     startActivity(intent1);
-                }
-                else if (id == R.id.appInfo) {
-//                    Intent intent1 = new Intent(MainActivity.this, AppInfoActivity.class);
-//                    startActivity(intent1);
+                } else if (id == R.id.appInfo) {
+                    Intent intent1 = new Intent(MainActivity.this, AppInfoActivity.class);
+                    startActivity(intent1);
                 } else if (id == R.id.logout) {
                     Intent intent1 = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent1);
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                 Button btn1 = findViewById(R.id.play);
                 Button btn2 = findViewById(R.id.history);
 
-                if(Values.dName != null) {
+                if (Values.dName != null) {
                     if (!isRecording) {
                         initAudioRecorder();
                         mRecorder.start();
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    //-------------------------- 메인화면에서 강아지 선택 -------------------------//
+        //-------------------------- 메인화면에서 강아지 선택 -------------------------//
         choice = findViewById(R.id.choice);
         choice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -248,16 +248,16 @@ public class MainActivity extends AppCompatActivity {
                     if (aName == null || aName.length == 0) {
                         Toast.makeText(MainActivity.this, "강아지를 먼저 등록해주세요.", Toast.LENGTH_LONG).show();
                     } else {
-                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
-                             .setTitle("강아지 선택")
-                             .setItems(aName, new DialogInterface.OnClickListener() {
-                                 @Override
-                                 public void onClick(DialogInterface dialog, int item) {
-                                     Values.dName = aName[item];
-                                     choice.setText(aName[item]);
-                                     Log.d("dog name test", Values.dName);
-                                 }
-                             });
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+                                .setTitle("강아지 선택")
+                                .setItems(aName, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int item) {
+                                        Values.dName = aName[item];
+                                        choice.setText(aName[item]);
+                                        Log.d("dog name test", Values.dName);
+                                    }
+                                });
                         AlertDialog alert = builder.create();
                         alert.show();
                     }
@@ -302,14 +302,24 @@ public class MainActivity extends AppCompatActivity {
         Log.d("path test", mPath);
 
         mRecorder.reset();
-
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        mRecorder.setAudioEncodingBitRate(16);
-        mRecorder.setAudioSamplingRate(44100);
+
+        if (Build.VERSION.SDK_INT >= 10) {
+            mRecorder.setAudioSamplingRate(44100);
+            mRecorder.setAudioEncodingBitRate(96000);
+            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+            mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+
+        } else {
+            // older version of Android, use crappy sounding voice codec
+            mRecorder.setAudioSamplingRate(8000);
+            mRecorder.setAudioEncodingBitRate(12200);
+            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+            mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        }
 
         mRecorder.setOutputFile(mPath);
+        mRecorder.setMaxDuration(20000);
 
         try {
             mRecorder.prepare();
@@ -339,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
         timerTask = new TimerTask() {
             @Override
             public void run() {
-                int currentMaxAmplitude = mRecorder.getMaxAmplitude() * 4;
+                int currentMaxAmplitude = mRecorder.getMaxAmplitude() * 1;
                 audioRecordView.update(currentMaxAmplitude); //redraw view
             }
         };

@@ -45,10 +45,10 @@ public class ListAdapter extends ArrayAdapter {
         // 아이템 내 각 위젯에 데이터 반영
         fileName.setText(listViewItem.getFileName());
 
-        list_play = (Button) convertView.findViewById(R.id.list_play);
+        list_play = convertView.findViewById(R.id.list_play);
         list_play.setOnClickListener(data.get(position).onClickListener);
 
-        list_delete = (Button) convertView.findViewById(R.id.list_delete);
+        list_delete = convertView.findViewById(R.id.list_delete);
         list_delete.setOnClickListener(data.get(position).onClickListener);
 
         convertView.setTag("" + position);

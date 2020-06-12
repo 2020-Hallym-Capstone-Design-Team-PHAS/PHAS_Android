@@ -1047,6 +1047,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable btn_round_shape
+drawable btn_round_shape_deep_blue
 drawable btn_round_shape_gray
 drawable btn_round_shape_white
 drawable design_bottom_navigation_item_background
@@ -1056,6 +1057,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dog_icon
+drawable dog_list_icon
+drawable drawer_dog_icon
 drawable email
 drawable gradation
 drawable hotdog
@@ -1064,6 +1067,8 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable info_icon
+drawable logout_icon
 drawable menu_icon
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1084,6 +1089,7 @@ drawable password_icon
 drawable spinner_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable using_icon
 drawable visible_off
 id ALT
 id CTRL
@@ -1241,6 +1247,7 @@ id icon_group
 id ifRoom
 id image
 id info
+id introduce
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1251,6 +1258,7 @@ id line1
 id line3
 id listMode
 id listView
+id list_delete
 id list_item
 id list_play
 id log_in
@@ -1336,6 +1344,7 @@ id src_in
 id src_over
 id standard
 id start
+id step
 id stretch
 id submenuarrow
 id submit_area
@@ -1380,6 +1389,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id warning
 id withText
 id wraning
 id wrap

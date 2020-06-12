@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -119,6 +120,12 @@ public class HistoryActivity extends AppCompatActivity implements View.OnClickLi
                                     file.delete();
                                 }
                             }
+
+                            Toast.makeText(HistoryActivity.this, "삭제 완료!", Toast.LENGTH_SHORT).show();
+                            Intent intent = getIntent();
+                            finish();
+                            startActivity(intent);
+
                             break;
 
                         case DialogInterface.BUTTON_NEGATIVE: // dialog 창에서 no 버튼을 누른 경우
@@ -129,7 +136,6 @@ public class HistoryActivity extends AppCompatActivity implements View.OnClickLi
             };
             AlertDialog.Builder builder = new AlertDialog.Builder(HistoryActivity.this);
             builder.setMessage("정말 삭제하시겠어요 ?").setPositiveButton("네", dialogClickListener).setNegativeButton("아니요", dialogClickListener).show();
-
         }
     }
 

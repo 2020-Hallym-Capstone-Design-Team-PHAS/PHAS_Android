@@ -110,11 +110,9 @@
         android:id="@+id/pwInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="5dp"
         android:text="* 비밀번호는 반드시 [소문자 1개] [숫자 1개]\n   [특수문자 1개] [8-16byte]의 길이여야 합니다."
         app:layout_constraintBottom_toTopOf="@id/confirm_password"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintTop_toBottomOf="@id/gl_top4" />
 

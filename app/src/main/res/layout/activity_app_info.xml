@@ -49,18 +49,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_percent="0.13"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28"/>
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="어플리케이션 정보"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
         app:layout_constraintTop_toTopOf="@id/gl_top0"/>
+
+    <TextView
+        android:id="@+id/introduce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요. \n\n어플리케이션을 받아주셔서 감사합니다. \n\n저희는 한림대학교 PHAS팀 입니다."
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintTop_toBottomOf="@id/gl_top1"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="\n\n본 어플리케이션은 반려동물의 \n\n심음을 측정해 서버로 전송하면\n\n머신러닝을 사용해 계산하여\n\n심장의 이상여부를 판단해주는\n\n어플리케이션입니다."
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gl_left0"
+        app:layout_constraintEnd_toEndOf="@id/gl_right0"
+        app:layout_constraintTop_toBottomOf="@id/introduce"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

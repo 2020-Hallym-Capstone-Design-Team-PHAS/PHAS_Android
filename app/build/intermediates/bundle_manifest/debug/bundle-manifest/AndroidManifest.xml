@@ -41,6 +41,7 @@
         </activity>
         <activity android:name="com.example.phas.LoginActivity" />
         <activity android:name="com.example.phas.RegisterActivity" />
+        <activity android:name="com.example.phas.AppInfoActivity" />
     </application>
 
 </manifest>
