@@ -9,6 +9,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,10 +19,12 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -77,10 +81,15 @@ public class MainActivity extends AppCompatActivity {
 
     Boolean flag = false;
 
+    ViewDialog viewDialog;
+    View view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        viewDialog = new ViewDialog(this);
 
         toolBar = findViewById(R.id.toolbar);
         setSupportActionBar(toolBar);
@@ -268,11 +277,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //-------------------------- 파일 서버로 전송 -------------------------//
+        view = new View(this);
         mSend = findViewById(R.id.send);
         mSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new HttpMultiPart();
+                showCustomLoadingDialog(view);
             }
         });
     }
@@ -374,5 +384,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+    }
+
+    public void showCustomLoadingDialog(View view) {
+
+        //..show gif
+        viewDialog.showDialog();
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                viewDialog.hideDialog();
+            }
+        }, 5000);
     }
 }

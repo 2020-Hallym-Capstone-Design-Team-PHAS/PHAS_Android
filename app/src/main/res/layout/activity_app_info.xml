@@ -66,6 +66,7 @@
         android:textStyle="bold"
         android:textSize="25sp"
         android:gravity="center"
+        android:fontFamily="@font/maple"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
@@ -79,6 +80,7 @@
         android:textStyle="bold"
         android:textSize="19sp"
         android:gravity="center"
+        android:fontFamily="@font/maple"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
         app:layout_constraintTop_toBottomOf="@id/gl_top1"/>
@@ -91,6 +93,7 @@
         android:textStyle="bold"
         android:textSize="19sp"
         android:gravity="center"
+        android:fontFamily="@font/maple"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
         app:layout_constraintTop_toBottomOf="@id/introduce"/>

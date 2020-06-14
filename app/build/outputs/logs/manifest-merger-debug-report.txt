@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\16de5a105d918594ea18965f8161a8bc\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.Armen101:AudioRecordView:1.0.2] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\dedf614d27773690e3dbc9c872a5035f\jetified-AudioRecordView-1.0.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\ef8a364a6a39421e69c96cf68eeb3e63\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -39,20 +39,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\YONG\.gradle\caches\
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\9c0d2720907bb8bd5d5976efee735314\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\d00c90699ae27cc1e1ce5e4b3e530617\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\13ac386f95e101744ae5f7d486caaa8c\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:2:11-69
@@ -77,11 +77,11 @@ ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:9:5-67
 	android:name
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:9:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:10:5-78
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:12:5-35:19
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:12:5-37:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\16de5a105d918594ea18965f8161a8bc\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\16de5a105d918594ea18965f8161a8bc\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\YONG\.gradle\caches\transforms-2\files-2.1\380cbbd0623e9b22e21961fc6ec82b14\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -108,52 +108,56 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\YO
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:19:9-65
 	android:usesCleartextTraffic
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:20:9-44
-activity#com.example.phas.DogListActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:9-53
+activity#com.example.phas.LoadingActivity
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:9-62
 	android:name
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:19-50
+activity#com.example.phas.DogListActivity
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:22:9-53
+	android:name
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:22:19-50
 activity#com.example.phas.DogRegisterActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:22:9-57
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:9-57
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:22:19-54
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:19-54
 activity#com.example.phas.CautionActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:9-53
-	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:19-50
-activity#com.example.phas.HistoryActivity
 ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:24:9-53
 	android:name
 		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:24:19-50
+activity#com.example.phas.HistoryActivity
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:25:9-53
+	android:name
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:25:19-50
 activity#com.example.phas.MainActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:25:9-50
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:9-50
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:19-47
 activity#com.example.phas.IntroActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:9-31:20
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:9-33:20
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:19-48
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:13-30:29
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:31:27-74
 activity#com.example.phas.LoginActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:32:9-51
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:34:9-51
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:32:19-48
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:34:19-48
 activity#com.example.phas.RegisterActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:33:9-54
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:35:9-54
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:33:19-51
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:35:19-51
 activity#com.example.phas.AppInfoActivity
-ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:34:9-52
+ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:36:9-53
 	android:name
-		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:34:19-49
+		ADDED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:36:19-50
 uses-sdk
 INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml

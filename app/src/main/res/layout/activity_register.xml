@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32"/>
+        app:layout_constraintGuide_percent="0.33"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_top1"
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.71"/>
+        app:layout_constraintGuide_percent="0.73"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_top3"
@@ -40,6 +40,13 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_left0"
@@ -103,15 +110,15 @@
         android:drawableRight="@drawable/visible_off"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
-        app:layout_constraintTop_toBottomOf="@id/email"
         app:layout_constraintBottom_toTopOf="@id/gl_top4"/>
 
     <TextView
         android:id="@+id/pwInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/maple"
         android:text="* 비밀번호는 반드시 [소문자 1개] [숫자 1개]\n   [특수문자 1개] [8-16byte]의 길이여야 합니다."
-        app:layout_constraintBottom_toTopOf="@id/confirm_password"
+        app:layout_constraintBottom_toTopOf="@id/gl_top6"
         app:layout_constraintEnd_toEndOf="@id/gl_right0"
         app:layout_constraintStart_toStartOf="@id/gl_left0"
         app:layout_constraintTop_toBottomOf="@id/gl_top4" />
