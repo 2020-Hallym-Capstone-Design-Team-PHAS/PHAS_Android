@@ -30,7 +30,7 @@
 16-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:10:22-76
 17
 18    <application
-18-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:12:5-37:19
+18-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:12:5-38:19
 19        android:allowBackup="true"
 19-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:13:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -51,47 +51,50 @@
 28-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:19:9-65
 29        android:usesCleartextTraffic="true" >
 29-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:20:9-44
-30        <activity android:name="com.example.phas.LoadingActivity" />
-30-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:9-62
-30-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:19-50
-31        <activity android:name="com.example.phas.DogListActivity" />
+30        <activity android:name="com.example.phas.ResultListActivity" />
+30-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:9-65
+30-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:21:19-53
+31        <activity android:name="com.example.phas.LoadingActivity" />
 31-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:22:9-53
 31-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:22:19-50
-32        <activity android:name="com.example.phas.DogRegisterActivity" />
-32-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:9-57
-32-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:19-54
-33        <activity android:name="com.example.phas.CautionActivity" />
-33-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:24:9-53
-33-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:24:19-50
-34        <activity android:name="com.example.phas.HistoryActivity" />
+32        <activity android:name="com.example.phas.DogListActivity" />
+32-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:9-53
+32-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:23:19-50
+33        <activity android:name="com.example.phas.DogRegisterActivity" />
+33-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:24:9-57
+33-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:24:19-54
+34        <activity android:name="com.example.phas.CautionActivity" />
 34-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:25:9-53
 34-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:25:19-50
-35        <activity android:name="com.example.phas.MainActivity" />
-35-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:9-50
-35-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:19-47
-36        <activity android:name="com.example.phas.IntroActivity" >
-36-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:9-33:20
-36-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:19-48
-37            <intent-filter>
-37-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:28:13-32:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:17-69
-38-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:31:17-77
-40-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:31:27-74
-41            </intent-filter>
-42        </activity>
-43        <activity android:name="com.example.phas.LoginActivity" />
-43-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:34:9-51
-43-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:34:19-48
-44        <activity android:name="com.example.phas.RegisterActivity" />
-44-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:35:9-54
-44-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:35:19-51
-45        <activity android:name="com.example.phas.AppInfoActivity" />
-45-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:36:9-53
-45-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:36:19-50
-46    </application>
-47
-48</manifest>
+35        <activity android:name="com.example.phas.HistoryActivity" />
+35-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:9-53
+35-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:26:19-50
+36        <activity android:name="com.example.phas.MainActivity" />
+36-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:9-50
+36-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:27:19-47
+37        <activity android:name="com.example.phas.IntroActivity" >
+37-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:28:9-34:20
+37-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:28:19-48
+38            <intent-filter>
+38-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:29:13-33:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:30:17-69
+39-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:30:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:32:17-77
+41-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:32:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity android:name="com.example.phas.LoginActivity" />
+44-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:35:9-51
+44-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:35:19-48
+45        <activity android:name="com.example.phas.RegisterActivity" />
+45-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:36:9-54
+45-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:36:19-51
+46        <activity android:name="com.example.phas.AppInfoActivity" />
+46-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:37:9-53
+46-->C:\Users\YONG\Desktop\PHAS\app\src\main\AndroidManifest.xml:37:19-50
+47    </application>
+48
+49</manifest>

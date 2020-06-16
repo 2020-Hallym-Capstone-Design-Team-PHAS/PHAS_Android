@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LoadingActivity"></activity>
+        <activity android:name=".ResultListActivity"></activity>
+        <activity android:name=".LoadingActivity" />
         <activity android:name=".DogListActivity" />
         <activity android:name=".DogRegisterActivity" />
         <activity android:name=".CautionActivity" />

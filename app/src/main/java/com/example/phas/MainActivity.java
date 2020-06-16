@@ -16,10 +16,12 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.media.midi.MidiDeviceService;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
     Button mBtPlay = null;
     Button mBtHistory = null;
     Button mSend = null;
+    Button mBtResult = null;
 
     Boolean flag = false;
 
@@ -222,6 +225,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mBtResult = findViewById(R.id.result);
+        mBtResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ResultListActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         //-------------------------- 메인화면에서 강아지 선택 -------------------------//
         choice = findViewById(R.id.choice);
@@ -395,8 +408,10 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                new HttpMultiPart(MainActivity.this);
+
                 viewDialog.hideDialog();
             }
-        }, 5000);
+        }, 8000);
     }
 }

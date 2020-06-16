@@ -120,11 +120,7 @@ public class HistoryActivity extends AppCompatActivity implements View.OnClickLi
                                     file.delete();
                                 }
                             }
-
                             Toast.makeText(HistoryActivity.this, "삭제 완료!", Toast.LENGTH_SHORT).show();
-                            Intent intent = getIntent();
-                            finish();
-                            startActivity(intent);
 
                             break;
 

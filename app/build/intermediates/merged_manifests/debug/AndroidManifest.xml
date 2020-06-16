@@ -27,6 +27,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.phas.ResultListActivity" />
         <activity android:name="com.example.phas.LoadingActivity" />
         <activity android:name="com.example.phas.DogListActivity" />
         <activity android:name="com.example.phas.DogRegisterActivity" />

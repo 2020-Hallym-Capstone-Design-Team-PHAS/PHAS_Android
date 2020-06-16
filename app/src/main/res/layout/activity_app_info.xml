@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.28"/>
+        app:layout_constraintGuide_percent="0.33"/>
 
     <TextView
         android:layout_width="0dp"

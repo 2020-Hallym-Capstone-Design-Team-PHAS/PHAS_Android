@@ -53,7 +53,7 @@ public class DogListAdapter extends BaseAdapter {
             }
             convertView = inflater.inflate(R.layout.dog_list_item, parent, false);
         }
-        TextView oTextTitle = (TextView) convertView.findViewById(R.id.context);
+        TextView oTextTitle = convertView.findViewById(R.id.context);
 
         if(oTextTitle != null) oTextTitle.setText(m_oData.get(position).getsName());
 
